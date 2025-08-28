@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "thordantic"
+version = "0.1.0"
+description = "Pydantic models and JSON schemas for the VeChain Thor API."
+authors = ["Clayton Neal"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "thordantic", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.11.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.4.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+pythonpath = [
+    "src",
+]
