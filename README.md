@@ -7,7 +7,7 @@
 
 ## 🚀 Features
 
-- ✅ **Pydantic models** for VeChain Thor RPC endpoints  
+- ✅ **Pydantic models** for VeChain Thor Rest endpoints  
 - ✅ **Annotated types** (Pydantic v2 style) for core blockchain values like `Address`, `HexInt`, and `HexStr`  
   - Built on `typing.Annotated` → still plain `str`/`int` at runtime  
   - Validators ensure correct format (`0x…`, length checks, etc.)  
