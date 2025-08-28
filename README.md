@@ -1,4 +1,4 @@
-# 🐍 thordantic
+# ⚡️ thordantic
 
 > **Pydantic models and JSON schemas for the VeChain Thor API.**  
 > Typed validation and parsing of VeChain JSON requests & responses, made easy.
