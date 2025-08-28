@@ -1,10 +1,5 @@
 # 🐍 thordantic
 
-[![PyPI version](https://img.shields.io/pypi/v/thordantic.svg)](https://pypi.org/project/thordantic/)
-[![Python versions](https://img.shields.io/pypi/pyversions/thordantic.svg)](https://pypi.org/project/thordantic/)
-[![License](https://img.shields.io/github/license/yourusername/thordantic.svg)](./LICENSE)
-[![Tests](https://github.com/yourusername/thordantic/actions/workflows/tests.yml/badge.svg)](https://github.com/yourusername/thordantic/actions)
-
 > **Pydantic models and JSON schemas for the VeChain Thor API.**  
 > Typed validation and parsing of VeChain JSON requests & responses, made easy.
 
