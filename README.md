@@ -1,5 +1,7 @@
 # ⚡️ thordantic
 
+![Tests](https://github.com/<OWNER>/<REPO>/actions/workflows/run_tests.yml/badge.svg)
+
 > **Pydantic models and JSON schemas for the VeChain Thor API.**  
 > Typed validation and parsing of VeChain JSON requests & responses, made easy.
 
