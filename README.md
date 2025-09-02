@@ -33,3 +33,16 @@ To run tests:
 ```bash
 poetry run pytest
 ```
+
+## Development Progress
+
+Endpoints mapped so far:
+
+- ✅ Accounts
+- ⚠️ Transactions
+- ⚠️ Blocks
+- ⚠️ Logs
+- ⚠️ Node
+- ⚠️ Subscriptions
+- ⚠️ Debug
+- ⚠️ Fees

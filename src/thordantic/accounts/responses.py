@@ -46,3 +46,17 @@ class InspectClausesResponse(RootModel[List[InspectClauseResponse]]):
     Inspect clauses response for /accounts/* for all clauses
     """
     pass
+
+class ContractByteCodeResponse(ThorModel):
+    """
+    Get contract bytecode response for /accounts/{address}/code endpoint.
+    """
+    code: HexStr
+
+class StoragePositionValueResponse(ThorModel):
+    """
+    Get storage position value response for /accounts/{address}/storage/{key} endpoint.
+    """
+    value: HexStr
+
+
