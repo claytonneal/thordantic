@@ -39,7 +39,7 @@ poetry run pytest
 Endpoints mapped so far:
 
 - ✅ Accounts
-- ⚠️ Transactions
+- ✅ Transactions
 - ⚠️ Blocks
 - ⚠️ Logs
 - ⚠️ Node

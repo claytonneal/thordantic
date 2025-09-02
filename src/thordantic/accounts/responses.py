@@ -1,5 +1,5 @@
 from typing import List
-from thordantic.types.address import Address
+from thordantic.types.thor import Address
 from thordantic.types.hex import HexInt, HexStr
 from thordantic.config import ThorModel
 from pydantic import Field, RootModel, NonNegativeInt

@@ -15,10 +15,13 @@ def _validate_hex_chars(s: str) -> None:
         raise PydanticCustomError("hex_chars", "invalid hex characters")
 
 # ---------- HexStr (any-length 0x-hex string) ----------
+# Note: "0x" is parsed as empty string
 
 def _validate_hex_str(v: str) -> str:
     if not isinstance(v, str) or not _is_hex_prefixed(v):
         raise PydanticCustomError("hex_str", "expected 0x-prefixed hex string")
+    if v.lower() == "0x":
+        return ""
     _validate_hex_chars(v)
     return v.lower()
 
@@ -55,8 +58,6 @@ def _parse_hex_int(v: int | str) -> int:
                 return int(hex_part, 16)
             except ValueError:
                 raise PydanticCustomError("hex_int", "invalid hex digits in 0x… quantity")
-        # optionally: allow plain decimal strings
-        # if s.isdigit(): return int(s)
 
     raise PydanticCustomError("hex_int", "expected int or 0x… hex quantity")
 
@@ -77,7 +78,6 @@ def bound_hex_str(n: int):
         return v
     return Annotated[str, AfterValidator(_validator)]
 
-HexStr16 = bound_hex_str(16)
 
 # ---------- HexUInt (unsigned int: >= 0, serializes as 0x…) ----------
 
@@ -106,3 +106,9 @@ HexUInt = Annotated[
     BeforeValidator(_parse_hex_uint),
     PlainSerializer(lambda x: hex(int(x)), when_used="json"),  # JSON always as 0x…
 ]
+
+# --- fixed size ----
+
+HexStr16 = bound_hex_str(16)
+HexStr64 = bound_hex_str(64)
+HexStr40 = bound_hex_str(40)
