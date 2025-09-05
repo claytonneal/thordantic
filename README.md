@@ -43,7 +43,7 @@ Endpoints mapped so far:
 
 - ✅ Accounts
 - ✅ Transactions
-- ⚠️ Blocks
+- ✅ Blocks
 - ⚠️ Logs
 - ⚠️ Node
 - ⚠️ Subscriptions
